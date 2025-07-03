@@ -25,6 +25,6 @@ jobs:
 
             - name: Lint
               run: |
-                  uv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-                  uv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=150 --statistics
-                  uv run pylint $(find . -name "*.py")
+                  uv run flake8 $(find . -path ./.venv -prune -o -name "*.py" -print) --count --select=E9,F63,F7,F82 --show-source --statistics
+                  uv run flake8 $(find . -path ./.venv -prune -o -name "*.py" -print) --count --exit-zero --max-complexity=10 --max-line-length=150 --statistics
+                  uv run pylint $(find . -path ./.venv -prune -o -name "*.py" -print)
