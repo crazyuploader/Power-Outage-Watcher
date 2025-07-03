@@ -4,6 +4,8 @@ utilities.py
 This module provides utility functions for the Power Outage Watcher application.
 """
 
+__author__ = "Jugal Kishore <me@devjugal.com>"
+
 import datetime as dt
 import humanize
 

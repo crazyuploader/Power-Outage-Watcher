@@ -5,6 +5,8 @@ This module provides functions to load configuration from a YAML file and extrac
 handling environment variable lookups.
 """
 
+__author__ = "Jugal Kishore <me@devjugal.com>"
+
 # pylint: disable=C0301
 
 import os

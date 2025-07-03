@@ -9,15 +9,17 @@ information page. It extracts scheduled outage dates and their associated PDF li
 
 __author__ = "Jugal Kishore <me@devjugal.com>"
 
+# pylint: disable=R0914
+
 from typing import List, Dict, Any
 from bs4 import BeautifulSoup
 import requests
-from urllib3.exceptions import InsecureRequestWarning
+import urllib3
 
 # Suppress only InsecureRequestWarning
 # This is used because the target website might be using
 # an outdated TLS configuration, which can trigger warnings.
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+urllib3.disable_warnings()
 
 
 def parse_mysore_power_outage(url: str) -> List[Dict[str, Any]]:
