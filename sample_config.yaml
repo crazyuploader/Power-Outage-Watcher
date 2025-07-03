@@ -1,0 +1,29 @@
+# config.yaml
+
+# General settings for the PowerOutageWatch application
+settings:
+    # The URL of the Mysore Power Outage web page to parse.
+    outage_page_urls:
+        cesc_mysore: "https://cescmysore.karnataka.gov.in/new-page/Scheduled Power Interruption information 2025-26/en"
+    # Directory where downloaded PDF files will be temporarily stored.
+    pdf_download_dir: "downloaded_pdfs"
+    # File to keep track of PDF URLs that have already been processed to avoid re-notifying.
+    processed_pdfs_file: "processed_pdfs.json"
+    # Clean up downloaded PDFs after processing (true/false).
+    clean_up_pdfs: true
+    # Interval in seconds to check for new outages.
+    check_interval: 3600 # Check every hour
+
+# Strings to search for within the PDF content.
+# Notifications will be sent if any of these strings are found.
+search_strings:
+    - "Vijayanagar"
+
+# Apprise notification URLs.
+# You can define multiple services here.
+# It's recommended to use environment variables for sensitive URLs like API keys.
+# Example: "env:APPRISE_URL_TELEGRAM", "env:APPRISE_URL_EMAIL"
+apprise_urls:
+    - "env:APPRISE_URL" # Reads from APPRISE_URL environment variable
+    # - "mailto:your_email@example.com" # Example: direct email (less secure for sensitive info)
+    # - "tgram://YOUR_BOT_TOKEN/YOUR_CHAT_ID" # Example: direct Telegram (less secure for sensitive info)

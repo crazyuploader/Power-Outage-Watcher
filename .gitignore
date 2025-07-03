@@ -174,3 +174,11 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# Configuration files
+config.yaml
+
+# Downloaded files
+downloaded_pdfs
+
+# Processed files JSON
+processed_pdfs.json
