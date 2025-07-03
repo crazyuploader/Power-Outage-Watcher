@@ -4,8 +4,8 @@ utilities.py
 This module provides utility functions for the Power Outage Watcher application.
 """
 
-import humanize
 import datetime as dt
+import humanize
 
 
 def get_natural_time(seconds):

@@ -1,12 +1,15 @@
 """
 config_parser.py
 
-This module provides functions to load configuration from a YAML file and extract Apprise URLs, handling environment variable lookups.
+This module provides functions to load configuration from a YAML file and extract Apprise URLs,
+handling environment variable lookups.
 """
 
+# pylint: disable=C0301
+
+import os
 from typing import Dict, Any, List
 import yaml
-import os
 
 
 def load_config(config_file_path: str) -> Dict[str, Any]:

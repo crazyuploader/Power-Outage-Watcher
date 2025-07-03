@@ -33,7 +33,7 @@ def main():
 
         # Wait for the specified interval before checking again
         duration = config["settings"]["check_interval"]
-        print("Sleeping for {}...".format(get_natural_time(duration)))
+        print(f"Sleeping for {get_natural_time(duration)}...")
         time.sleep(duration)
 
 
