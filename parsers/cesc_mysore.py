@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-parser.py
+cesc_mysore.py
 
 This module is responsible for parsing the HTML content of the Mysore Power Outage
 information page. It extracts scheduled outage dates and their associated PDF links.

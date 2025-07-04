@@ -6,6 +6,7 @@ This is the main file for the project.
 
 __author__ = "Jugal Kishore <me@devjugal.com>"
 
+import json
 import time
 from config_parser import load_config, get_apprise_urls
 from parsers.cesc_mysore import parse_mysore_power_outage
@@ -29,7 +30,7 @@ def main():
         )
 
         # Print the parsed outage information
-        print(outages)
+        print(json.dumps(outages, indent=4, ensure_ascii=False))
 
         # Wait for the specified interval before checking again
         duration = config["settings"]["check_interval"]
