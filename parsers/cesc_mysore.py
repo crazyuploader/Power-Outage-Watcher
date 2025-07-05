@@ -51,18 +51,8 @@ def parse_mysore_power_outage(url: str) -> List[Dict[str, Any]]:
     soup = BeautifulSoup(response.text, "html.parser")
     outages: List[Dict[str, Any]] = []
 
-    # Locate the main container div that holds the outage table.
-    # This provides a more specific target for finding the table.
-    table_container = soup.find("div", id="table-archive")
-    if not table_container:
-        print(
-            "ERROR: Could not find the table container with id 'table-archive'. "
-            "HTML structure might have changed."
-        )
-        return outages
-
     # Locate the specific table containing the outage data within its container.
-    table = table_container.find("table", class_="table-striped")
+    table = soup.find("table", class_="table-striped")
     if not table:
         print(
             "ERROR: Could not find the table with class 'table-striped' inside "
