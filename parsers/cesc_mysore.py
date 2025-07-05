@@ -54,10 +54,7 @@ def parse_mysore_power_outage(url: str) -> List[Dict[str, Any]]:
     # Locate the specific table containing the outage data within its container.
     table = soup.find("table", class_="table-striped")
     if not table:
-        print(
-            "ERROR: Could not find the table with class 'table-striped' inside "
-            "the 'table-archive' container. HTML structure might have changed."
-        )
+        print("WARNING: No table found with class 'table-striped'.")
         return outages
 
     # Find all table rows (<tr>) within the identified table.
