@@ -6,7 +6,7 @@ authors = [{name = "Jugal Kishore", email = "me@devjugal.com"}]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "beautifulsoup4==4.13.5",
+    "beautifulsoup4==4.14.2",
     "flake8>=7.3.0",
     "humanize>=4.12.3",
     "pylint>=3.3.7",
